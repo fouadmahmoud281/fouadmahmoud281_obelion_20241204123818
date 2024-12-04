@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+
+.AttendeePage-attendee-page {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+.AttendeePage-sidebar {
+  width: 240px;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.AttendeePage-logo {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.AttendeePage-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.AttendeePage-sidebar ul li {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.AttendeePage-sidebar ul li a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #3C3C43;
+}
+
+.AttendeePage-sidebar ul li a .AttendeePage-icon {
+  margin-right: 10px;
+}
+
+.AttendeePage-sidebar ul li.active,
+.AttendeePage-sidebar ul li:hover {
+  background-color: #6A0DAD;
+}
+
+.AttendeePage-sidebar ul li.active a,
+.AttendeePage-sidebar ul li.active a .AttendeePage-label,
+.AttendeePage-sidebar ul li.active a .AttendeePage-icon {
+  color: #FFFFFF;
+}
+
+.AttendeePage-sidebar ul li a .AttendeePage-label {
+  font-size: 14px;
+}
+
+.AttendeePage-content {
+  flex-grow: 1;
+  margin-left: 240px;
+  padding: 24px;
+  background-color: #F8F9FA;
+}
+
+.AttendeePage-content header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.AttendeePage-header-left h1 {
+  font-size: 22px;
+  color: #3C3C43;
+  margin: 0;
+}
+
+.AttendeePage-header-left h2 {
+  font-size: 16px;
+  color: #000000;
+  margin: 4px 0 0 0;
+}
+
+.AttendeePage-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.AttendeePage-header-right input[type="text"] {
+  width: 300px;
+  padding: 8px 12px;
+  margin-right: 16px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px #AAAAAA;
+}
+
+.AttendeePage-header-right .AttendeePage-profile {
+  position: relative;
+}
+
+.AttendeePage-header-right .AttendeePage-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.AttendeePage-tabs-and-steps {
+  margin-top: 16px;
+}
+
+.AttendeePage-tabs {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.AttendeePage-tab {
+  padding: 10px 20px;
+  margin-right: 8px;
+  background-color: transparent;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #3C3C43;
+}
+
+.AttendeePage-tab.active {
+  background-color: #6A0DAD;
+  color: #FFFFFF;
+  border-color: #6A0DAD;
+}
+
+.AttendeePage-steps-indicator {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.AttendeePage-step {
+  margin-right: 16px;
+  font-size: 14px;
+  color: #3C3C43;
+  position: relative;
+  padding-left: 20px;
+}
+
+.AttendeePage-step::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #CCCCCC;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.AttendeePage-step.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.AttendeePage-step.active::before {
+  background-color: #6A0DAD;
+}
+
+.AttendeePage-attendee-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.AttendeePage-attendee-form .AttendeePage-form-column {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.AttendeePage-attendee-form .AttendeePage-form-column:last-child {
+  margin-right: 0;
+}
+
+.AttendeePage-attendee-form .AttendeePage-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.AttendeePage-attendee-form .AttendeePage-form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #3C3C43;
+}
+
+.AttendeePage-attendee-form .AttendeePage-form-group input,
+.AttendeePage-attendee-form .AttendeePage-form-group select {
+  padding: 8px 12px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+}
+
+.AttendeePage-invite-button {
+  padding: 12px 24px;
+  background-color: #6A0DAD;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.AttendeePage-invite-button:hover {
+  background-color: #9B30FF;
+}
+
+.AttendeePage-main-content {
+  background-color: #FFFFFF;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px #AAAAAA;
+  margin-bottom: 24px;
+}
+
+.AttendeePage-main-content h1 {
+  font-size: 22px;
+  color: #3C3C43;
+  margin-bottom: 16px;
+}
+
+.AttendeePage-main-content p {
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.AttendeePage-main-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.AttendeePage-main-content table th,
+.AttendeePage-main-content table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #CCCCCC;
+  font-size: 16px;
+}
+
+.AttendeePage-main-content table th {
+  background-color: #F8F9FA;
+  color: #3C3C43;
+}
+
+.AttendeePage-main-content a {
+  color: #6A0DAD;
+  text-decoration: none;
+}
+
+.AttendeePage-upload-button {
+  padding: 12px 24px;
+  background-color: #6A0DAD;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.AttendeePage-upload-button:hover {
+  background-color: #9B30FF;
+}
+
+.AttendeePage-illustration {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.AttendeePage-illustration img {
+  max-width: 100%;
+  height: auto;
+}
